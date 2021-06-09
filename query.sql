@@ -9,3 +9,9 @@ WHERE `document_type` = "CI";
 SELECT * 
 FROM `ospiti`
 WHERE `date_of_birth` > "1988-12-31";
+
+-- 4. Seleziona tutti gli ospiti il cui nome inizia con la D
+
+SELECT *
+FROM `ospiti`
+WHERE `name` LIKE "D%"
