@@ -33,3 +33,9 @@ SELECT *
 FROM `ospiti`
 WHERE `document_type` = "Driver License"
 AND `date_of_birth` LIKE "1975%";
+
+-- 8. Quanti paganti sono anche ospiti?
+
+SELECT * 
+FROM `paganti`
+WHERE `ospite_id` <> "NULL";
