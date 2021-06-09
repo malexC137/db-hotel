@@ -21,3 +21,15 @@ WHERE `name` LIKE "D%";
 SELECT SUM(`price`)
 FROM `pagamenti`
 WHERE `status` = "accepted";
+
+-- 6. Qual è il prezzo massimo pagato?
+
+SELECT MAX(`price`)
+FROM `pagamenti`;
+
+-- 7. Seleziona gli ospiti riconosciuti con patente e nati nel 1975
+
+SELECT *
+FROM `ospiti`
+WHERE `document_type` = "Driver License"
+AND `date_of_birth` LIKE "1975%";
