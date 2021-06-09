@@ -14,4 +14,10 @@ WHERE `date_of_birth` > "1988-12-31";
 
 SELECT *
 FROM `ospiti`
-WHERE `name` LIKE "D%"
+WHERE `name` LIKE "D%";
+
+-- 5. Calcola il totale incassato degli ordini accepted
+
+SELECT SUM(`price`)
+FROM `pagamenti`
+WHERE `status` = "accepted";
