@@ -39,3 +39,8 @@ AND `date_of_birth` LIKE "1975%";
 SELECT * 
 FROM `paganti`
 WHERE `ospite_id` <> "NULL";
+
+-- 9. Quanti posti letto ha l’hotel in totale?
+
+SELECT SUM(`beds`)
+FROM `stanze`;
