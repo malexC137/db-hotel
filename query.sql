@@ -10,6 +10,12 @@ SELECT *
 FROM `ospiti`
 WHERE `date_of_birth` > "1988-12-31";
 
+-- 3. Seleziona tutti gli ospiti che hanno più dI 20 anni (al momento dell’esecuzione della query)
+
+SELECT *
+FROM `ospiti`
+WHERE DATEDIFF(CURRENT_DATE,`date_of_birth`) > (365 * 20);
+
 -- 4. Seleziona tutti gli ospiti il cui nome inizia con la D
 
 SELECT *
