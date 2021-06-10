@@ -2,7 +2,7 @@
 
 SELECT YEAR(`date_of_birth`), COUNT(`date_of_birth`)
 FROM `ospiti`
-GROUP BY `date_of_birth`; -- NOT WORKING PROPERLY
+GROUP BY (YEAR(`date_of_birth`));
 
 -- 2. Somma i prezzi dei pagamenti raggruppandoli per status
 
@@ -18,6 +18,8 @@ GROUP BY(`stanza_id`);
 
 -- 4. Fai una analisi per vedere se ci sono ore in cui le prenotazioni sono più frequenti
 
-
+SELECT HOUR(`created_at`), COUNT(`created_at`)
+FROM `prenotazioni`
+GROUP BY (HOUR(`created_at`)) ;
 
 -- 5. Quante prenotazioni ha fatto l’ospite che ha fatto più prenotazioni? (quante, non chi!)
