@@ -24,7 +24,8 @@ GROUP BY (HOUR(`created_at`)) ;
 
 -- 5. Quante prenotazioni ha fatto l’ospite che ha fatto più prenotazioni? (quante, non chi!)
 
-SELECT `ospite_id`, COUNT(`ospite_id`)
+SELECT `ospite_id`, COUNT(*) as `prenotazioni`
 FROM `prenotazioni_has_ospiti`
 GROUP BY `ospite_id`
-HAVING COUNT(`ospite_id`) > 2
+ORDER BY `prenotazioni` DESC
+LIMIT 1
